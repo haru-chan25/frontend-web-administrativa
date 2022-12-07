@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Solicitudes</title>
+    <link rel="stylesheet" href="assets/css/estilos-landingpage.css">
+    <link rel="stylesheet" href="assets/css/admin-productos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;1,900&family=Roboto:ital,wght@0,100;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/80a562f62d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 m-0">
+        <div class="container-fluid d-flex navbar-admin">
+        <a class="navbar-brand d-flex justify-content-start p-0" href="#"><span class="logo-admin p-0" ><img class="mt-0 p-0" src="assets/img/logo.svg" alt=""> </span></a>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end opciones-navbar opciones-navbar-movil" id="navbarNav">
+            <ul class="navbar-nav d-flex opciones-navbar">
+                <li class="nav-item d-flex justify-content-around ">
+                    <a class="nav-link opciones-navbar" href="#">Afiliaciones</a>
+                </li>
+                <li class="nav-item d-flex justify-content-around">
+                    <a class="nav-link" href="#">Motoristas</a>
+                </li>
+              <li class="nav-item d-flex justify-content-around">
+                <a class="nav-link me-4" href="#">Ordenes</a>
+              </li>
+              
+              <li class="d-flex justify-content-around">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                     <i style="font-size: 2rem;" class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end " style="background-color: #C4C4C4;"  aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Acción</a></li>
+                      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
+                    </ul>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="titulo-producto d-flex justify-content-center pt-5">
+            <span>Solicitudes de Motoristas</span>
+        </div>
+        <br><br>
+        <h1 class="titulo-ubicacion d-flex justify-content-center">Solicitantes</h1>
+        <!-- Contenedor de detalles de solicitudes -->
+        <div class="divisores"><span></span></div>
+        <div class="d-flex  justify-content-center ">
+            <div class="detalles-solicitudes pb-4 pt-3">
+                <div class="texto-solicitudes">Nombre1</div>
+                    <button type="button" class="btn btn-detalles shadow-sm">Ver detalles</button>
+            </div>                     
+        </div>
+
+        <div class="divisores"><span></span></div>
+        <div class="d-flex  justify-content-center ">
+            <div class="detalles-solicitudes pb-4 pt-3">
+                <div class="texto-solicitudes">Nombre2</div>
+                    <button type="button" class="btn btn-detalles shadow-sm">Ver detalles</button>
+            </div>                     
+        </div>
+
+        <div class="divisores"><span></span></div>
+        <div class="d-flex  justify-content-center ">
+            <div class="detalles-solicitudes pb-4 pt-3">
+                <div class="texto-solicitudes">Nombre3</div>
+                    <button type="button" class="btn btn-detalles shadow-sm">Ver detalles</button>
+            </div>                     
+        </div>
+
+        <!-- Divisor de los datos del motorista -->
+        <div class="divisorlargo"><span></span></div>
+        <!-- Aqui se ingresan los datos de los motoristas -->
+        <div class="d-flex justify-content-center ">
+            <div class="detalles-solicitudes pb-4 pt-3">
+                <div class="texto-solicitudes">
+                    <span style="padding-left: 13px;">Nombre: </span><input type="text" class="botones-datos btn-light" disabled></input>  
+                </div>
+                <div class="texto-solicitudes">
+                    <span>Fecha de Nacimiento: </span> <input type="text" class="botones-datos btn-light" disabled></input>
+                </div>
+            </div> 
+
+             <div class="detalles-solicitudes pb-4 pt-3">
+                <div class="texto-solicitudes">
+                    <span style="padding-left: 43px;">Sexo: </span>  <input type="text" class="botones-datos btn-light" disabled></input>
+                </div>
+                <div class="texto-solicitudes">
+                    <span>Correo Electrónico: </span><input type="email" class="botones-datos btn-light" disabled></input>
+                </div>
+            </div> 
+            
+            <div class="detalles-solicitudes pb-4 pt-3">
+                <div class="texto-solicitudes">
+                    <span style="padding-left: 22px;">Celular: </span><input type="tel" class="botones-datos btn-light" disabled></input>
+                </div>
+                <div class="texto-solicitudes">
+                    <span>Celular Alternativo: </span><input type="tel" class="botones-datos btn-light" disabled></input>
+                </div>
+            </div>   
+
+            <div class="detalles-solicitudes pb-4 pt-3">
+                <div class="texto-solicitudes">
+                    <span >Dirección: </span><textarea rows="2" cols="2" class="botones-datos btn-light" disabled></textarea>
+                </div>
+            </div>   
+        </div>
+    </section>
+
+    <div class="d-flex justify-content-center align-items-center pt-2">
+        <button type="button" class="btn shadow-sm  btn-nueva-subcategoria">Aceptar</button>
+        <button type="button" class="btn btn-eliminar-subcategoria shadow-sm">Rechazar</button>
+    </div>
+
+    <div class="divisores pt-5 pb-5"><span style="border: 2px solid #564975; background-color: #564975;"></span></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

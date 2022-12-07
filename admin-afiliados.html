@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Afiliados</title>
+    <link rel="stylesheet" href="assets/css/estilos-landingpage.css">
+    <link rel="stylesheet" href="assets/css/admin-productos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;1,900&family=Roboto:ital,wght@0,100;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/80a562f62d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 m-0">
+        <div class="container-fluid d-flex navbar-admin">
+        <a class="navbar-brand d-flex justify-content-start p-0" href="#"><span class="logo-admin p-0" ><img class="mt-0 p-0" src="assets/img/logo.svg" alt=""> </span></a>
+
+        <div class="collapse navbar-collapse d-flex justify-content-end opciones-navbar opciones-navbar-movil" id="navbarNav">
+            <ul class="navbar-nav d-flex opciones-navbar">
+                <li class="nav-item d-flex justify-content-around ">
+                    <a class="nav-link opciones-navbar" href="#">Afiliaciones</a>
+                </li>
+                <li class="nav-item d-flex justify-content-around">
+                    <a class="nav-link" href="#">Motoristas</a>
+                </li>
+              <li class="nav-item d-flex justify-content-around">
+                <a class="nav-link me-4" href="#">Ordenes</a>
+              </li>
+              
+              <li class="d-flex justify-content-around">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                     <i style="font-size: 2rem;" class="fa-solid fa-bars"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end " style="background-color: #C4C4C4;"  aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Acción</a></li>
+                      <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                      <li><a class="dropdown-item" href="#">Algo más aqui</a></li>
+                    </ul>
+                  </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+    <main class="mt-5 mx-1 px-0 ">
+        <section class=" d-flex justify-content-between" style="width: 100%;">
+            <div></div>
+            <div>
+                <div class="titulo-producto m-2 d-flex align-items-md-center"><span style="margin-left: 23rem;">Afiliados</span></div>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+            <!-- Boton de la Ventana Modal -->
+            <button type="button" class="btn  shadow-sm  btn-nueva-subcategoria" data-toggle="modal" data-target="#exampleModal">
+                Nueva Subcategoria
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Subcategoria</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex  justify-content-start">
+                            <label class="col-sm-2 col-form-label">Nombre: </label><input type="text" class="form-control" style="width: 75%;" placeholder="Nombre de la subcategoria"></input>                   
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+                <button type="button" class="btn btn-eliminar-subcategoria shadow-sm">Eliminar Subcategoría</button>
+            </div>
+            
+        </section>
+
+        <section class="mt-4">
+
+            <!-- Restaurantes -->
+            <div class="d-flex justify-content-center titulo-ubicacion mb-3"><span>Restaurantes</span></div>
+            <div class="divisores"><span></span></div>
+
+            <section class=" d-flex justify-content-between" style="width: 100%;">
+                <div></div>
+                <div>
+                    <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">Tegucigalpa</span></div>
+                </div>
+                <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+                    <div class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                    <div class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+                </div> 
+            </section>
+
+            <!-- Contenedor de las empresas -->
+            <div class="container" style="width: auto;">
+                <div class="row " style="width: 100%;">
+                    <div class="d-flex flex-column align-items-center col-5 col-md-2 mt-2 mb-2" >
+                        <div class="fig-producto"></div>
+                        <div class="nombre-producto mt-1">Restaurante1</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center col-5 col-md-2 mt-2" >
+                        <div class="fig-producto"></div>
+                        <div class="nombre-producto mt-1">Restaurante2</div>
+                    </div>
+
+                    <div class="d-flex flex-column align-items-center col-5 col-md-2 mt-2" >
+                        <div class="fig-producto"></div>
+                        <div class="nombre-producto mt-1">Restaurante3</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divisores"><span></span></div>
+
+        <section class=" d-flex justify-content-between" style="width: 100%;">
+            <div></div>
+            <div>
+                <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">San Pedro Sula</span></div>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+                <div class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                <div class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+            </div> 
+        </section>
+
+        <div class="divisores"><span></span></div>
+
+        <section class=" d-flex justify-content-between" style="width: 100%;">
+            <div></div>
+            <div>
+                <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">La Ceiba</span></div>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+                <div class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                <div class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+            </div> 
+        </section>
+
+        <!-- Farmacias -->
+        <div class="divisorlargo pt-3"><span></span></div>
+        <div class="d-flex justify-content-center titulo-ubicacion m-4"><span>Farmacias</span></div>
+
+        <div class="divisores"><span></span></div>
+
+        <section class=" d-flex justify-content-between" style="width: 100%;">
+            <div></div>
+            <div>
+                <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">Tegucigalpa</span></div>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+                <div class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                <div class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+            </div> 
+        </section>
+
+        <div class="divisores"><span></span></div>
+
+        <section class=" d-flex justify-content-between" style="width: 100%;">
+            <div></div>
+            <div>
+                <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">San Pedro Sula</span></div>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+                <div class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                <div class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+            </div> 
+        </section>
+        
+        <div class="divisores"><span></span></div>
+
+        <section class=" d-flex justify-content-between" style="width: 100%;">
+            <div></div>
+            <div>
+                <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">La Ceiba</span></div>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+                <div class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                <div class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+            </div> 
+        </section>
+
+        <!-- Supermercados -->
+        <div class="divisorlargo pt-3"><span></span></div>
+        <div class="d-flex justify-content-center titulo-ubicacion m-4"><span>Supermercados</span></div>
+
+        <div class="divisores"><span></span></div>
+
+        <section class=" d-flex justify-content-between" style="width: 100%;">
+            <div></div>
+            <div>
+                <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">Tegucigalpa</span></div>
+            </div>
+            <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
+                <div class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                <div class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+            </div> 
+        </section>
+    </main>  
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
