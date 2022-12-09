@@ -420,3 +420,294 @@ body{
     justify-content: center;
     
 }
+
+/* Estilos de la pagina de ordenes */
+.fondo{
+    width: 100%;
+    height: 106%;
+}
+
+.rect{
+    position: absolute;
+    width: 100%;
+    height: 52px;
+    border-radius: 0px 0px 30px 30px;
+    background: #262626;
+    border: 1px solid #D7F205;
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.text{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.equis{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.3rem;
+}
+
+.text1{
+    
+    width: 100%;
+    position: absolute;
+    font-family: 'Lato';
+    font-weight: 800;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem;
+    color: #000000;
+}
+
+.divisor1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6.5rem;
+}
+
+.divisor1 span{
+    position: absolute;
+    width: 90%;   
+    margin-top: 100px; 
+    border: 2px solid rgba(22, 0, 39, 0.56);
+    background-color: rgba(22, 0, 39, 0.56);
+}
+
+.cont-circulos{
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    margin-top: 4rem;
+}
+
+.cont-botones{
+    position: absolute;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+.ordenes{
+    width: 150px;
+    height: 33px;
+    background: rgba(215, 216, 217, 0.2);
+    border: 1.5px solid #CFFF04;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-top: 35rem;
+    font-size: 22px;
+    font-family: 'Roboto';
+}
+
+.rect1{
+    width: 100%;
+    border-radius: 0px 0px 30px 30px;
+    height: 94px;
+    margin-top: -10rem;
+    background: #262626;
+    border: 1px solid #D7F205;
+    display: flex;
+	flex-direction: column;
+    align-content: center;
+}
+
+.divisor2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.divisor2 span{
+    position: absolute;
+    width: 90%;   
+    margin-top: 100px; 
+    background: #160027;
+    border: 2px solid #D7F205;
+    border: 2px solid #7C8C03;
+}
+
+.text2{
+    width: 100%;
+    position: absolute;
+    font-family: 'Lato';
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.divisor3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6.5rem;
+}
+
+.divisor3 span{
+    position: absolute;
+    width: 90%;   
+    margin-top: 100px; 
+    background: #160027;
+    border: 2px solid #7C8C03;
+}
+
+.text3{
+    width: 100%;
+    position: absolute;
+    font-family: 'Lato';
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-nueva{
+    width: 110%;
+    border-radius: 20px;
+    font-family: 'Lato';
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 1rem;
+    color: #D7F205!important;
+    background-color: #262626!important;
+}
+
+.cont-boton{
+    width: 100%;
+    position: absolute;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.texto-detalles{     
+    font-family: 'Lato';
+    font-size: 19px;
+    color: #000000;
+}
+
+/* Ordenes tomadas */
+.rect2{
+    width: 100%;
+    border-radius: 0px 0px 100px 100px;
+    height: 98px;
+    margin-top: -10rem;
+    background: #262626;
+    border: 1px solid #D7F205;
+    display: flex;
+	flex-direction: column;
+    align-content: center;
+}
+
+.cuadrado{
+    position: absolute;
+    width: 100%;
+    height: 155px;
+    background: #423F3F;
+    margin-top: 9rem;
+}
+
+.divisor4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.divisor4 span{
+    position: absolute;
+    width: 90%;   
+    margin-top: 100px; 
+    background: #160027;
+    border: 2px solid #D7F205;
+}
+
+.cuadrado2{
+    position: absolute;
+    width: 100%;
+    height: 475px;
+    background: #d9d9d9;
+    margin-top: 3rem;
+}
+
+.cuadrado3{
+    position: absolute;
+    width: 100%;
+    height: 530px;
+    background: #d9d9d9;
+    border-radius: 0px 0px 60px 60px;
+    margin-top: 3rem;
+}
+
+/* Estilos de la pagina de motoristas */
+.texto-arriba{ 
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: white;
+}
+
+.rect4{
+    width: 100%;
+    border-radius: 0px 0px 100px 100px;
+    height: 75px;
+    margin-top: -10rem;
+    background: #262626;
+    border: 1px solid #D7F205;
+    display: flex;
+	flex-direction: column;
+    align-content: center;
+}
+
+.cuadrado4{
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #D7D8D9;
+    border-radius: 0px 0px 208px 208px;
+    margin-top: 3rem;
+}
+
+.circuloo{
+    margin-top: -4.5rem; 
+    height: 350px;
+    left: -17px;
+}
+
+.btn-dark1{
+    min-width: 340px;
+    height: 35px;
+    text-align: center;
+    color: white;
+    font-size: 1rem!important;
+    border: 0!important;
+    background-color: black;
+}
