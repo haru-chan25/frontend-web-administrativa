@@ -57,7 +57,7 @@ function verAfiliados(categorias){
                 <div onclick= "agregarEmpresa()" class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
                 
                 <div onclick= "editarEmpresa()" class="cont-iconos me-1"><i class="fa-solid fa-pen-to-square"></i></div>
-                <div onclick= "" class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
+                <div onclick= "eliminarEmpresa()" class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
             </div> 
         </section>
         <!-- Contenedor de las empresas -->
@@ -81,6 +81,20 @@ function verAfiliados(categorias){
     });
 }
 
+function eliminarEmpresa(){
+    console.log('eliminar ', idEmpresaSelect)
+}
+
+
+
+function editarEmpresa(){
+    console.log('editar ', idEmpresaSelect)
+}
+
+
+function agregarEmpresa(){
+    console.log('agregar nueva empresa')
+}
 
 const mostrarEmpresas = async (nombreCategoria, zona,idDiv) => {
     const respuesta = await fetch(`http://localhost:3001/api/admin/obtenerEmpresas`, {
@@ -104,7 +118,9 @@ const mostrarEmpresas = async (nombreCategoria, zona,idDiv) => {
 
         empresasCategoriaZona.forEach(empresa => {
             contenedorEmpresas +=  `<div onclick="empresaSelect('${empresa._id}')" class="d-flex flex-column align-items-center col-5 col-md-2 mt-2" >
-            <div class="fig-producto"></div>
+            <div class="fig-producto"><img style="object-fit: contain;
+            width:100%;
+            height:100%;" src="${empresa.urlImagen}" alt=""></div>
             <div class="nombre-producto mt-1">${empresa.nombre}</div>
         </div>`
         });
