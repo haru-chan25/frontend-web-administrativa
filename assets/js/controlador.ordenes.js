@@ -2,6 +2,7 @@
 var idOrden1 = "";
 var idMotorista = "";
 
+
 const verOrdenes = async (zona) => {
   
         const respuesta = await fetch(`http://localhost:3001/api/admin/ordenesDisponibles/${zona}`, {
@@ -66,7 +67,34 @@ const verOrdenes = async (zona) => {
     // };
     
 
-function finalizar(){
-    idMotorista =  document.getElementById('sltMotoristas').value;
-}
+// function finalizar(){
+//     idMotorista =  document.getElementById('sltMotoristas').value;
+// }
     
+
+const finalizar = async () => {
+    idMotorista =  document.getElementById('sltMotoristas').value;
+  
+    const respuesta = await fetch(`http://localhost:3001/api/admin/asignarOrdenMotorista`, {
+        method: "put",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    idMotorista:idMotorista,
+                    estado:1,
+                    idOrden: idOrden1
+            }),
+    });
+
+    
+    const mensaje = await respuesta.json();    
+    console.log(mensaje);
+
+    document.getElementById('mensaje').innerHTML = mensaje.mensaje;
+
+
+
+    
+}
