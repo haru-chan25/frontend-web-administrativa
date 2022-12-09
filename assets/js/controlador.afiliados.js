@@ -1,5 +1,6 @@
 var idEmpresaSelect = "";
 
+
 var zonas = [
     {
         nombre:"Tegucigalpa",
@@ -54,7 +55,7 @@ function verAfiliados(categorias){
                 <div class="texto-solicitudes m-2 d-flex align-items-md-center"><span style="margin-left: 3rem;">${zona.nombre}</span></div>
             </div>
             <div class="d-flex flex-column justify-content-end align-items-center flex-md-row justify-content-sm-end">
-                <div onclick= "agregarEmpresa()" class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
+                <div onclick= "agregarEmpresa('${categoria.nombre}${zona.zona}')" class="cont-iconos" style="margin-right: 0.3rem;"><i class="fa-solid fa-plus"></i></div>
                 
                 <div onclick= "editarEmpresa()" class="cont-iconos me-1"><i class="fa-solid fa-pen-to-square"></i></div>
                 <div onclick= "eliminarEmpresa()" class="cont-iconos"><i class="fa-sharp fa-solid fa-trash"></i></div>
@@ -89,11 +90,13 @@ function eliminarEmpresa(){
 
 function editarEmpresa(){
     console.log('editar ', idEmpresaSelect)
+    localStorage.setItem('idEmpresa', JSON.stringify(idEmpresaSelect))
 }
 
 
 function agregarEmpresa(){
-    console.log('agregar nueva empresa')
+    console.log('agregar nueva empresa')    
+    window.location.href = "/admin-productos.html";
 }
 
 const mostrarEmpresas = async (nombreCategoria, zona,idDiv) => {
