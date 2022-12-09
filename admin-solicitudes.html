@@ -19,13 +19,13 @@
         <div class="collapse navbar-collapse d-flex justify-content-end opciones-navbar opciones-navbar-movil" id="navbarNav">
             <ul class="navbar-nav d-flex opciones-navbar">
                 <li class="nav-item d-flex justify-content-around ">
-                    <a class="nav-link opciones-navbar" href="#">Afiliaciones</a>
+                    <a class="nav-link opciones-navbar" href="/admin-afiliados.html">Afiliaciones</a>
                 </li>
                 <li class="nav-item d-flex justify-content-around">
-                    <a class="nav-link" href="#">Motoristas</a>
+                    <a class="nav-link" href="/admin-solicitudes.html">Motoristas</a>
                 </li>
               <li class="nav-item d-flex justify-content-around">
-                <a class="nav-link me-4" href="#">Ordenes</a>
+                <a class="nav-link me-4" href="/admin-ordenes.html">Ordenes</a>
               </li>
               
               <li class="d-flex justify-content-around">
@@ -52,29 +52,13 @@
         <br><br>
         <h1 class="titulo-ubicacion d-flex justify-content-center">Solicitantes</h1>
         <!-- Contenedor de detalles de solicitudes -->
-        <div class="divisores"><span></span></div>
-        <div class="d-flex  justify-content-center ">
-            <div class="detalles-solicitudes pb-4 pt-3">
-                <div class="texto-solicitudes">Nombre1</div>
-                    <button type="button" class="btn btn-detalles shadow-sm">Ver detalles</button>
-            </div>                     
-        </div>
 
-        <div class="divisores"><span></span></div>
-        <div class="d-flex  justify-content-center ">
-            <div class="detalles-solicitudes pb-4 pt-3">
-                <div class="texto-solicitudes">Nombre2</div>
-                    <button type="button" class="btn btn-detalles shadow-sm">Ver detalles</button>
-            </div>                     
-        </div>
 
-        <div class="divisores"><span></span></div>
-        <div class="d-flex  justify-content-center ">
-            <div class="detalles-solicitudes pb-4 pt-3">
-                <div class="texto-solicitudes">Nombre3</div>
-                    <button type="button" class="btn btn-detalles shadow-sm">Ver detalles</button>
-            </div>                     
-        </div>
+        <span id="listaSolicitantes">
+            
+
+        </span>
+
 
         <!-- Divisor de los datos del motorista -->
         <div class="divisorlargo"><span></span></div>
@@ -82,46 +66,48 @@
         <div class="d-flex justify-content-center ">
             <div class="detalles-solicitudes pb-4 pt-3">
                 <div class="texto-solicitudes">
-                    <span style="padding-left: 13px;">Nombre: </span><input type="text" class="botones-datos btn-light" disabled></input>  
+                    <span  style="padding-left: 13px;">Nombre: </span><input id="nombre" type="text" class="botones-datos btn-light" disabled></input>  
                 </div>
                 <div class="texto-solicitudes">
-                    <span>Fecha de Nacimiento: </span> <input type="text" class="botones-datos btn-light" disabled></input>
+                    <span>Fecha de Nacimiento: </span> <input id="fecha" type="text" class="botones-datos btn-light" disabled></input>
                 </div>
             </div> 
 
              <div class="detalles-solicitudes pb-4 pt-3">
                 <div class="texto-solicitudes">
-                    <span style="padding-left: 43px;">Sexo: </span>  <input type="text" class="botones-datos btn-light" disabled></input>
+                    <span style="padding-left: 43px;">Sexo: </span>  <input id="sexo" type="text" class="botones-datos btn-light" disabled></input>
                 </div>
                 <div class="texto-solicitudes">
-                    <span>Correo Electrónico: </span><input type="email" class="botones-datos btn-light" disabled></input>
+                    <span>Correo Electrónico: </span><input id="correo" type="email" class="botones-datos btn-light" disabled></input>
                 </div>
             </div> 
             
             <div class="detalles-solicitudes pb-4 pt-3">
                 <div class="texto-solicitudes">
-                    <span style="padding-left: 22px;">Celular: </span><input type="tel" class="botones-datos btn-light" disabled></input>
+                    <span style="padding-left: 22px;">Celular: </span><input id="celular" type="tel" class="botones-datos btn-light" disabled></input>
                 </div>
                 <div class="texto-solicitudes">
-                    <span>Celular Alternativo: </span><input type="tel" class="botones-datos btn-light" disabled></input>
+                    <span>Celular Alternativo: </span><input id="celAlt" type="tel" class="botones-datos btn-light" disabled></input>
                 </div>
             </div>   
 
             <div class="detalles-solicitudes pb-4 pt-3">
                 <div class="texto-solicitudes">
-                    <span >Dirección: </span><textarea rows="2" cols="2" class="botones-datos btn-light" disabled></textarea>
+                    <span >Dirección: </span><textarea id="direccion" rows="2" cols="2" class="botones-datos btn-light" disabled></textarea>
                 </div>
             </div>   
         </div>
     </section>
 
     <div class="d-flex justify-content-center align-items-center pt-2">
-        <button type="button" class="btn shadow-sm  btn-nueva-subcategoria">Aceptar</button>
-        <button type="button" class="btn btn-eliminar-subcategoria shadow-sm">Rechazar</button>
+        <button onclick="aceptar()" type="button" class="btn shadow-sm  btn-nueva-subcategoria">Aceptar</button>
+        <button onclick="rechazar()" type="button" class="btn btn-eliminar-subcategoria shadow-sm">Rechazar</button>
     </div>
 
     <div class="divisores pt-5 pb-5"><span style="border: 2px solid #564975; background-color: #564975;"></span></div>
 
+
+    <script src="./assets/js/controlador.solicitudes.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
