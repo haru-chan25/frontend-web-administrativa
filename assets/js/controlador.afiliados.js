@@ -1,6 +1,9 @@
 var idEmpresaSelect = "";
 var idCategoria = "";
 
+
+var nombreCategoriaSelect, zonaSelect, idDivSelect;
+
 var zonas = [
   {
     nombre: "Tegucigalpa",
@@ -77,10 +80,6 @@ function verAfiliados(categorias) {
   });
 }
 
-function eliminarEmpresa() {
-  console.log("eliminar ", idEmpresaSelect);
-}
-
 function editarEmpresa() {
   console.log("editar ", idEmpresaSelect);
   localStorage.setItem("idEmpresa", JSON.stringify(idEmpresaSelect));
@@ -96,8 +95,13 @@ function agregarEmpresa(categoria1, zon, id) {
 }
 
 const mostrarEmpresas = async (nombreCategoria, zona, idDiv) => {
+  nombreCategoriaSelect = nombreCategoria;
+  zonaSelect= zona;
+  idDivSelect = idDiv;
+  
   const respuesta = await fetch(
     `http://localhost:3001/api/admin/obtenerEmpresas`,
+    
     {
       method: "post",
       headers: {
@@ -135,4 +139,25 @@ const mostrarEmpresas = async (nombreCategoria, zona, idDiv) => {
 function empresaSelect(idEmpresa) {
   idEmpresaSelect = idEmpresa;
   console.log(idEmpresaSelect);
+}
+
+
+
+const  eliminarEmpresa = async() =>  {
+  console.log("eliminar ", idEmpresaSelect);
+
+  const respuesta = await fetch(`http://localhost:3001/api/admin/eliminarEmpresa/${idEmpresaSelect}`,
+  {
+      method: "delete",
+      headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      }
+  }
+  );
+  const mensaje = await respuesta.json();
+
+  console.log(mensaje)
+
+  mostrarEmpresas(nombreCategoriaSelect, zonaSelect,idDivSelect);
 }
