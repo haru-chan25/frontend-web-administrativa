@@ -83,6 +83,7 @@ function verAfiliados(categorias) {
 function editarEmpresa() {
   console.log("editar ", idEmpresaSelect);
   localStorage.setItem("idEmpresa", JSON.stringify(idEmpresaSelect));
+  window.location.href = "/admin-productos2.html";
 }
 
 function agregarEmpresa(categoria1, zon, id) {

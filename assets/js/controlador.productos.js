@@ -143,7 +143,7 @@ const agregarProducto = async() => {
     
 
     document.getElementById('imagenProducto').innerHTML = `<img id="imagenProducto" style="object-fit: contain;
-    width:5%;
+    width:75%;
     height:100%;" src="${producto.urlImagen}" alt="">`;
 
     verProductos();
