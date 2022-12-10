@@ -52,8 +52,8 @@
 
         <section class=" d-flex justify-content-between contenedor-principal" id="caracteristicas-empresa" style="width: 100%;">
             <div class="d-flex flex-column flex-md-row-reverse" >
-                <div class="titulo-empresa-admin m-2 d-flex  align-items-md-center"><span>Nombre de la empresa</span></div>
-                <div class="mt-2 logo-empresa-admin"></div>
+                <div class="titulo-empresa-admin m-2 d-flex  align-items-md-center"><span id="nombreEmpresa">Nombre de la empresa</span></div>
+                <div id="imagen" class="mt-2 logo-empresa-admin d-flex justify-content-center "></div>
             </div>
             <div class="d-flex flex-column justify-content-evenly align-items-center flex-md-row justify-content-sm-evenly">
              <!-- Boton de la Ventana Modal -->
@@ -73,12 +73,13 @@
                     </div>
                     <div class="modal-body">
                         <div class="d-flex  justify-content-start">
-                            <label class="col-sm-2 col-form-label">Nombre: </label><input type="text" class="form-control" style="width: 75%;" placeholder="Nombre de la subcategoria"></input>                   
+                            <label class="col-sm-2 col-form-label">Nombre: </label>
+                            <input id="subcategoria" type="text" class="form-control" style="width: 75%;" placeholder="Nombre de la subcategoria"></input>                   
                         </div>
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    <button onclick="nuevaSubCat()" type="button" class="btn btn-primary">Guardar Cambios</button>
                     </div>
                 </div>
             </div>
@@ -94,30 +95,9 @@
             <div class="divisor mt-3"><span></span></div>
 
             <div class="container" style="width: auto;">
-                <div class="row " style="width: 100%;">
+                <div id="contenedorProductos" class="row " style="width: 100%;">
 
-                    <div class="d-flex flex-column align-items-center col-5 col-md-2 mt-2" >
-                        <div class="fig-producto"></div>
-                        <div class="nombre-producto mt-1">Producto1</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center col-5 col-md-2 mt-2" >
-                        <div class="fig-producto"></div>
-                        <div class="nombre-producto mt-1">Producto1</div>
-                    </div>
-
-                    <div class="d-flex flex-column align-items-center col-5 col-md-2 mt-2" >
-                        <div class="fig-producto"></div>
-                        <div class="nombre-producto mt-1">Producto1</div>
-                    </div>
-
-
-                    <div class="d-flex flex-column align-items-center col-5 col-md-2 mt-2" >
-                        <div class="fig-producto"></div>
-                        <div class="nombre-producto mt-1">Producto1</div>
-                    </div>
-
-
+            
                 </div>
             </div>
         </section>
@@ -131,18 +111,16 @@
                 <form class=" d-flex flex-column flex-md-row  justify-content-md-around" action="">
                     <div class="d-flex flex-column justify-content-md-evenly margen-movil">
                         <div class="d-flex flex-row justify-content-between">
-                            <span class="detalles-producto">Nombre: </span> <input  class="input-productos" type="text"    placeholder="Producto 1">
+                            <span class="detalles-producto">Nombre: </span> <input  id="nombreProducto" class="input-productos" type="text"    placeholder="Producto 1">
                         </div>
                         <div class="d-flex flex-row justify-content-between margen-movil">
-                                <span class="detalles-producto">Precio: </span> <input class="input-productos" type="number"   placeholder="Precio">
+                                <span class="detalles-producto">Precio: </span> <input id="precio" class="input-productos" type="number"   placeholder="Precio">
                         </div>
                         <div class="d-flex flex-row justify-content-between margen-movil">
                             <span class="detalles-producto">Subcategoría: </span>
                              <!--Select de las subcategorias  -->
-                            <select id="subcategorias" class="input-productos">
-                                <option value="">Refrescos</option>
-                                <option value="">Dulces</option>
-                                <option value="">Alcohol</option>
+                            <select id="SelectSubcategorias" class="input-productos">
+
                               </select>
                         </div>
                 </div>
@@ -154,16 +132,22 @@
                             <div class="d-flex justify-content-end justify-content-md-center" style="width: 100%;">
                                 <div>                            
                                     <div class="imagen-editar d-flex flex-column  justify-content-center align-content-center   mb-2">
-                                        <span>img</span>
+                                        <span class="d-flex justify-content-center" id="imagenProducto">
+                                            img
+                                        </span>
+                                        
                                     </div>
-                                    <div class="d-flex justify-content-center"><button type="button mt-1" class="btn  shadow-sm  btn-nueva-subcategoria ">Actualizar   imagen</button></div>
+                                    <div class="d-flex justify-content-center">
+                                        <input id="urlImagenId" type="text" class="form-control" style="width: 75%;" placeholder="Ingrese una URL">
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="d-flex flex-row align-items-center justify-content-md-between mt-3">
                             <span class="detalles-producto">Descripción: </span>
-                            <input type="text" name="" id="descripcion" placeholder="descripcion del Producto 1">
+                            <input  type="text" name="" id="descripcion" placeholder="descripcion del Producto 1">
 
                         </div>
                         
@@ -172,7 +156,8 @@
                 </form>
 
                 <div class="d-flex justify-content-center" > 
-                    <button type="button mt-1" class="btn  shadow-sm  btn-aceptar ">Aceptar</button>
+                    <button id="agregar" onclick="agregarProducto()" type="button mt-1" class="btn  shadow-sm  btn-aceptar ">Agregar</button>
+
                 </div>
             </div>
 
@@ -180,7 +165,7 @@
 
     </main>
 
-    <script src="assets/js/controlador.js"></script>
+    <script src="./assets/js/controlador.productos2.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
